@@ -5,10 +5,10 @@ metadata:
   name: my-app
 spec:
   rules:
-  - host:
+  - host: myapp.learning.com
     http:
       paths:
       - path: /
         backend:
-          serviceName:
-          servicePort: 
+          serviceName: myservice
+          servicePort: 80

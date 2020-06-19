@@ -15,7 +15,7 @@ func main() {
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("hello there"))
+		w.Write([]byte("hello there, how you doing?"))
 	})
 
 	server := &http.Server{

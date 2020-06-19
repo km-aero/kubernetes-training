@@ -2,11 +2,11 @@
 kind: Pod
 apiVersion: v1
 metadata:
-  name: 
+  name: mypod
   labels:
-    app:
+    app: myapp
 spec:
   containers:
-  - name:
-    image:
+  - name: server
+    image: myapp:latest
     imagePullPolicy: Never

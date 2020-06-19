@@ -2,18 +2,22 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name:
+  name: mydeploy
 spec:
-  replicas:
+  replicas: 6
   selector:
     matchLabels:
-      app:
+      app: myapp
   template:
     metadata:
       labels:
-        app:
+        app: myapp
     spec:
       containers:
-      - name:
-        image:
+      - name: server
+        image: myapp:1.2
         imagePullPolicy: Never
+        readinessProbe:
+          httpGet:
+            path: /
+            port: 8080
